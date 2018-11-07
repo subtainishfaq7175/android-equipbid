@@ -113,11 +113,13 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private ArrayList<LotDetails> LocalList;
     private ArrayList<String> spinList;
     private ArrayList<Add_Detail> AddDetailList;
+    private boolean isNetwork = false;
 
     public MyDatabaseHelper(Context context) {
         super(context,DB_NAME, null, DB_VERSION);
         db = this.getWritableDatabase();
         mContext = context;
+
         // TODO Auto-generated constructor stub
     }
 
@@ -205,7 +207,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
         Log.e("CREATE_TABLE_LOT_DETAILS", CREATE_TABLE_LOT_DETAILS+"");
         long dd = db.insert(TABLE_NAME, null, cv);
-        if(dd != -1)
+        if(dd != -1 && !isNetwork)
         {
             Toast.makeText(mContext, "Lot Details Updated Successfully", Toast.LENGTH_SHORT).show();
             Intent inext = new Intent(mContext, Success_page.class);
@@ -218,6 +220,10 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
        else{
        }
         db.close();
+    }
+
+    public void setIsNetworkState(boolean isNetwork){
+        this.isNetwork = isNetwork;
     }
 
     public void updateRecord(LotDetails l, String auction_name, String lot_no) {
@@ -266,15 +272,15 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
         Log.e("CREATE_TABLE_LOT_DETAILS", CREATE_TABLE_LOT_DETAILS+"");
         long dd = db.update(TABLE_NAME, cv, Col_auction_number+" = "+auction_name+" and "+Col_lot_number+" = "+lot_no, null);
-        if(dd != -1)
+        if(dd != -1 && !isNetwork)
         {
-//            Toast.makeText(mContext, "Lot Details Updated Successfully", Toast.LENGTH_SHORT).show();
-//            Intent inext = new Intent(mContext, Success_page.class);
-//            inext.putExtra("name", l.getAuction_no());
-//            inext.putExtra("lotname", l.getLot_no());
-//            inext.putExtra("upc", l.getUpc());
-//            inext.putExtra("lot_status", l.getLot_status());
-//            mContext.startActivity(inext);
+            Toast.makeText(mContext, "Lot Details Updated Successfully", Toast.LENGTH_SHORT).show();
+            Intent inext = new Intent(mContext, Success_page.class);
+            inext.putExtra("name", l.getAuction_no());
+            inext.putExtra("lotname", l.getLot_no());
+            inext.putExtra("upc", l.getUpc());
+            inext.putExtra("lot_status", l.getLot_status());
+            mContext.startActivity(inext);
         }
         else{
         }

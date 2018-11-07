@@ -4211,8 +4211,9 @@ public class Lot_Details_New extends AppCompatActivity
                                     l.setThumbnail("");
                                 }
 
-                                uploadMultipartBoth(imagePaths_camera);
+                               if(isNetworkAvailable()) uploadMultipartBoth(imagePaths_camera);
                                 MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
+                                helper.setIsNetworkState(isNetworkAvailable());
                                 int count_AL = helper.CheckExistAL(Auction_name, lot_no, Lot_S);
                                 if(count_AL != 0)
                                 {
