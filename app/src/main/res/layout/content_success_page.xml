@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_not_found"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    tools:context="equipbid.armentum.com.equip_bid.Success_page"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:paddingBottom="30dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/thanks_n"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="70dp"
+                    android:id="@+id/imageView"
+                    android:layout_weight="1.65" />
+
+                <TextView
+                    android:text="Thanks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/thanks"
+                    android:textColor="#55616D"
+                    android:textSize="36dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_weight="0.03" />
+
+                <TextView
+                    android:text="Lot Successfully Uploaded!!"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:textColor="#55616D"
+                    android:id="@+id/textView2" />
+
+                <Button
+                    android:text="View Auction History"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/view_auction_history"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_green"
+                    android:textSize="19dp" />
+
+                <Button
+                    android:text="Upload More"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/upload_more"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_green"
+                    android:textSize="19dp" />
+            </LinearLayout>
+        </ScrollView>
+</RelativeLayout>

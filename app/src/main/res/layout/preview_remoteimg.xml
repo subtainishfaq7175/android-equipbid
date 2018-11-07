@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/thumbnailR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/btnCloseR"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:src="@mipmap/ic_cancel"
+        android:textColor="#ffffff"
+        />
+
+    <ImageView
+        android:id="@+id/btnDeleteR"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="73dp"
+        android:layout_marginTop="15dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:src="@mipmap/ic_delete"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_not_found"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="60dp"
+    tools:context="equipbid.armentum.com.equip_bid.Not_found"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:paddingBottom="30dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/error_n"
+                android:layout_marginTop="40dp"
+                android:id="@+id/imageView"
+                android:layout_weight="0.52" />
+
+            <TextView
+                android:text="Sorry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sorry"
+                android:textColor="#55616D"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:text="Due to some technical error, failed to upload your product !!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="17dp"
+                android:textColor="#FF4D4E"
+                android:id="@+id/textView2" />
+
+            <Button
+                android:text="Please Try Again"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/full_details"
+                android:textColor="#fff"
+                android:background="@mipmap/green_btn"
+                android:textSize="17dp"
+                android:layout_weight="0.11" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

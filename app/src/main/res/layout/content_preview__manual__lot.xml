@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_preview__manual__lot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="equipbid.armentum.com.equip_bid.Preview_Manual_Lot"
+    tools:showIn="@layout/app_bar_preview__manual__lot">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+            <TextView
+                android:text="LOT NO."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lot_no"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:paddingLeft="5dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:background="#EAEAEA"
+                android:textSize="18dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/lotno" />
+
+            <TextView
+                android:text="AUCTION NO."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/auctiontxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:background="#EAEAEA"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/auction_no" />
+
+            <TextView
+                android:text="UPC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/upctxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/upc" />
+
+            <TextView
+                android:text="ITEM TITLE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titletxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="2"
+                android:minLines="1"
+                android:id="@+id/item_title" />
+
+            <TextView
+                android:text="SELLER ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/slrtxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/seller_id" />
+
+            <TextView
+                android:text="DESCRIPTION"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/des"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:minLines="2"
+                android:maxLines="6"
+                android:id="@+id/descr" />
+            <TextView
+                android:text="ITEM CLASS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_classtxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColorHint="#7B7F82"
+                android:textSize="18dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/item_class" />
+
+            <TextView
+                android:text="BRAND"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/brand_txt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#7B7F82"
+                android:textSize="18dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/brand" />
+
+            <TextView
+                android:text="MODEL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/model_txt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#7B7F82"
+                android:textSize="18dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/model" />
+
+            <TextView
+                android:text="COLOR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/color_txt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#7B7F82"
+                android:textSize="18dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/color" />
+
+            <TextView
+                android:text="DIMENSION"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dimension_txt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#7B7F82"
+                android:textSize="18dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/dimension" />
+
+            <TextView
+                android:text="CATEGORY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cattxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/cat" />
+            <TextView
+                android:text="CONDITION"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:paddingLeft="5dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/condition" />
+
+            <TextView
+                android:text="ADDITIONAL DETAIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/additional_detail_c"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <equipbid.armentum.com.equip_bid.ExpandableHeightListView
+                android:id="@+id/checklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="-10dp"
+                android:horizontalSpacing="-15dp"
+                android:numColumns="3"
+                android:padding="0dp"
+                android:scrollHorizontally="true"
+                android:verticalScrollbarPosition="defaultPosition"
+                android:verticalSpacing="-10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:textSize="18dp"
+                android:ems="10"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:minLines="2"
+                android:maxLines="6"
+                android:id="@+id/add_detalils" />
+
+
+            <TextView
+                android:text="LOCATION"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/loctxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:ems="10"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/location" />
+
+            <TextView
+                android:text="MSRP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msrptxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:paddingLeft="5dp"
+                android:ems="10"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/msrp" />
+
+            <TextView
+                android:text="STARTING PRICE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/strpricetxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:paddingLeft="5dp"
+                android:ems="10"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/start_price" />
+
+            <TextView
+                android:text="RESERVE PRICE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvpricrtxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:ems="10"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/reverse_price" />
+
+            <TextView
+                android:text="QUANTITY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/qtytxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="18dp"
+                android:ems="10"
+                android:paddingLeft="5dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/quantity" />
+
+            <TextView
+                android:text="TAXABLE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:ems="10"
+                android:paddingLeft="5dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginBottom="15dp"
+                android:textColor="#8A8B91"
+                android:maxLines="1"
+                android:id="@+id/textable" />
+
+            <TextView
+                android:text="UPLOADED SNAPSHORTS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/snaptxt"
+                android:textColor="#C8C9CC"
+                android:layout_marginBottom="12dp"/>
+
+            <equipbid.armentum.com.equip_bid.ExpandableHeightGridView
+                android:id="@+id/gridGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:horizontalSpacing="-15dp"
+                android:numColumns="3"
+                android:padding="0dp"
+                android:scrollHorizontally="true"
+                android:verticalScrollbarPosition="defaultPosition"
+                android:verticalSpacing="-10dp"
+                tools:listitem="@layout/gallery_item" />
+            <!--<ImageView
+                android:id="@+id/imgSinglePick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_launcher" />-->
+            <!--</ViewSwitcher>-->
+            <equipbid.armentum.com.equip_bid.ExpandableHeightGridView
+                android:id="@+id/gridGallery1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:layout_marginTop="10dp"
+                android:numColumns="3"
+                android:padding="0dp"
+                android:scrollHorizontally="true"
+                android:verticalScrollbarPosition="defaultPosition" />
+
+            <equipbid.armentum.com.equip_bid.ExpandableHeightGridView
+                android:id="@+id/gridGallery11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:layout_marginTop="10dp"
+                android:verticalScrollbarPosition="defaultPosition"
+                android:numColumns="3"
+                android:scrollHorizontally="true"
+                android:padding="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:text="Back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/back"
+                    android:background="@drawable/border_new"
+                    android:layout_gravity="left"
+                    android:textColor="#7A7F83"
+                    android:layout_marginRight="70dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:text="Submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/next"
+                    android:layout_marginLeft="70dp"
+                    android:textColor="#7A7F83"
+                    android:background="@drawable/border_new"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

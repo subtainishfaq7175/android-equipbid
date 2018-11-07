@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_search__upc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="equipbid.armentum.com.equip_bid.Search_Upc"
+    tools:showIn="@layout/app_bar_search__upc">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#E2E2E2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/l1"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:hint="Enter UPC"
+            android:textSize="17dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:ems="10"
+            android:id="@+id/upc_edt"
+            android:layout_weight="0.90" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:srcCompat="@android:drawable/ic_menu_search"
+            android:id="@+id/search"
+            android:layout_weight="0.11" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/l1"
+        android:id="@+id/scrolls"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:text="If you don't have UPC code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="70dp"
+                android:textSize="19dp"
+                android:textColor="#55616D"
+                android:id="@+id/tx1" />
+
+            <Button
+                android:text="Add Manually"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/add_manual1"
+                android:textColor="#fff"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/green_btn"
+                android:textSize="17dp"
+                android:layout_weight="0.11" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/l1"
+        android:id="@+id/scrollError"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:paddingBottom="30dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sorry_1"
+                android:layout_marginTop="30dp"
+                android:id="@+id/imageView1"
+                android:layout_weight="0.52" />
+
+            <TextView
+                android:text="Sorry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tx2"
+                android:textColor="#55616D"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:text="Something went wrong. Please try again later."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:textColor="#55616D"
+                android:id="@+id/tx3" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/l1"
+        android:id="@+id/scrollNop"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:paddingBottom="30dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sorry_1"
+                android:layout_marginTop="35dp"
+                android:id="@+id/imageView"
+                android:layout_weight="0.52" />
+
+            <TextView
+                android:text="Sorry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tx4"
+                android:textColor="#55616D"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:text="No such Product is available!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:textColor="#55616D"
+                android:id="@+id/tx5" />
+
+            <Button
+                android:text="Add Manually"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/add_manual"
+                android:textColor="#fff"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/green_btn"
+                android:textSize="17dp"
+                android:layout_weight="0.11" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/l1"
+        android:id="@+id/scrollDetails"
+        android:visibility="gone"
+        android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:text="UPC code is valid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="70dp"
+            android:textSize="19dp"
+            android:textColor="#55616D"
+            android:id="@+id/tx6" />
+
+        <Button
+            android:text="View Details"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/view_details"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/green_btn"
+            android:textSize="17dp"
+            android:layout_weight="0.11" />
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

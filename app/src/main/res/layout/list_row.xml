@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_icon"
+            android:background="@drawable/rounded_img"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:id="@+id/thumbnailL"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:background="@drawable/rounded_img"
+            android:layout_marginRight="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="-45dp"
+            android:weightSum="1"
+            android:id="@+id/line"
+            android:background="@drawable/text_view">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auction No : "
+            android:textSize="16dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="5dp"
+            android:textColor="#fff"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.93"
+            android:id="@+id/a_name" />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_weight="0.1"
+                android:src="@mipmap/ic_edit_w"
+                android:textColor="#626262" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="equipbid.armentum.com.equip_bid.Create_New_Auction_Lot"
+    tools:showIn="@layout/app_bar_create__new__auction__lot">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:background="#fff"
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/title"
+                android:textSize="18dp"
+                android:text="Enter Auction Number"/>
+
+            <EditText
+                android:id="@+id/auction"
+                android:layout_below="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Auction Number"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:textColor="#7B7F82"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:maxLength="8"
+                android:paddingTop="10dp"
+                android:background="@drawable/edittext_createnew"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:inputType="number"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/auction"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/title1"
+                android:textSize="18dp"
+                android:text="Enter Lot Number"/>
+
+            <EditText
+                android:id="@+id/lot"
+                android:layout_below="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lot Number"
+                android:textSize="18dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:textColor="#7B7F82"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:maxLength="8"
+                android:paddingTop="10dp"
+                android:background="@drawable/edittext_createnew"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:inputType="number"
+                android:maxLines="1"/>
+
+            <Button
+                android:id="@+id/done"
+                android:layout_below="@+id/lot"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_green"
+                android:text="Done"
+                android:textSize="19dp"
+                android:layout_weight="0.20" />
+
+            <Button
+                android:id="@+id/done_d"
+                android:visibility="gone"
+                android:layout_below="@+id/done"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="-47.5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_g"
+                android:text="Done"
+                android:textSize="19dp"
+                android:layout_weight="0.20" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

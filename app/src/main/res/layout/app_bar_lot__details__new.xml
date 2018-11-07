@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="equipbid.armentum.com.equip_bid.Lot_Details_New">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/actionbarcolor"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lot Details"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_lot__details__new" />
+
+        <View
+            android:id="@+id/fabBGLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTransBg"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/fabLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/standard_23"
+            android:padding="@dimen/standard_12"
+            android:clipToPadding="false"
+            app:layout_behavior="equipbid.armentum.com.equip_bid.MoveUpwardBehavior"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="72dp"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19dp"
+                android:id="@+id/txtcancel"
+                android:text="Cancel"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@mipmap/ic_close"
+                app:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fabLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/standard_12"
+            android:clipToPadding="false"
+            android:layout_marginRight="@dimen/standard_23"
+            android:gravity="center_vertical"
+            app:layout_behavior="equipbid.armentum.com.equip_bid.MoveUpwardBehavior"
+            android:layout_marginBottom="78dp"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19dp"
+                android:id="@+id/txtcamera"
+                android:text="Camera"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@mipmap/ic_camera"
+                app:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fabLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/standard_12"
+            android:clipToPadding="false"
+            android:layout_marginRight="@dimen/standard_23"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="82dp"
+            app:layout_behavior="equipbid.armentum.com.equip_bid.MoveUpwardBehavior"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19dp"
+                android:id="@+id/txtgallery"
+                android:text="Gallery"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@mipmap/ic_gallery"
+                android:tint="@android:color/white"
+                app:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:gravity="center_vertical"
+            android:clipToPadding="false"
+            app:layout_behavior=".MoveUpwardBehavior"
+            android:padding="@dimen/standard_12"
+            android:layout_marginBottom="60dp"
+            android:layout_gravity="bottom|end">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:gravity="center_vertical"
+                app:srcCompat="@mipmap/ic_additems"
+                app:fabSize="normal"/>
+
+           <!--<android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="20dp"
+                app:srcCompat="@mipmap/ic_additems" />-->
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

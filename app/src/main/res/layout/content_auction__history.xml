@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_auction__history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="equipbid.armentum.com.equip_bid.Auction_History">
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:id="@+id/spinner"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp" />
+
+    <LinearLayout
+        android:layout_below="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/li2">
+
+        <TextView
+            android:text="0 Auction found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/auction_found"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/l1"
+            android:textSize="16dp"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"/>
+
+        <equipbid.armentum.com.equip_bid.GridViewWithHeaderAndFooter
+            android:id="@+id/list"
+            android:layout_below="@+id/auction_found"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp"
+            android:numColumns="2"
+            android:paddingBottom="10dp"
+            android:scrollbars="none"
+            android:layout_above="@+id/footer"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/li2local">
+
+        <TextView
+            android:text="0 Auction found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/auction_foundlocal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/l1"
+            android:textSize="16dp"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <equipbid.armentum.com.equip_bid.GridViewWithHeaderAndFooter
+            android:id="@+id/listLocal"
+            android:layout_below="@+id/auction_found"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp"
+            android:numColumns="2"
+            android:paddingBottom="10dp"
+            android:scrollbars="none"
+            android:layout_above="@+id/footer"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:background="#fff"
+            android:id="@+id/scroll"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sorry_1"
+                android:id="@+id/imageView"
+                android:layout_marginTop="60dp"
+                android:layout_weight="0.50" />
+
+            <TextView
+                android:text="Sorry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tx3"
+                android:textColor="#55616D"
+                android:textSize="37dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="0.04" />
+
+            <TextView
+                android:text="No such Auction is available!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textColor="#55616D"
+                android:id="@+id/tx4" />
+
+            <Button
+                android:text="Add New Auction"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/add_new_auction"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_green"
+                android:textSize="20dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

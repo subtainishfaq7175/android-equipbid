@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:layout_margin="15dp"
+    >
+
+    <TextView
+        android:text="DESCRIPTION"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/des"
+        android:layout_marginTop="12dp"
+        android:textColor="#C8C9CC"
+        android:textSize="17dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="17"
+        android:hint="Enter the Description"
+        android:textColorHint="#7B7F82"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="4dp"
+        android:textSize="21dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/lot_border"
+        android:layout_marginBottom="15dp"
+        android:textColor="#8A8B91"
+        android:minLines="3"
+        android:maxLines="17"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:id="@+id/descralert" />
+</LinearLayout>

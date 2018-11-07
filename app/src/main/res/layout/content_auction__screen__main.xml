@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/actionbarcolor"
+    tools:context="equipbid.armentum.com.equip_bid.Auction_Screen_Main">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:id="@+id/main_l"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="40dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="90dp"
+                app:srcCompat="@mipmap/main_n"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:id="@+id/main" />
+
+            <Button
+                android:text="Create new Auction"
+                android:background="@mipmap/green_btn_n1"
+                android:textColor="#556273"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="110dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/create_new_auction" />
+
+            <Button
+                android:text="Load an existing auction"
+                android:background="@mipmap/green_btn_n1"
+                android:textColor="#556273"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:id="@+id/load_existing" />
+
+            <Button
+                android:text="existing lot"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@mipmap/green_btn_n1"
+                android:textColor="#556273"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/existing_lot" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

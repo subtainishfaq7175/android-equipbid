@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_lot__details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="equipbid.armentum.com.equip_bid.Lot_Details_New"
+    tools:showIn="@layout/app_bar_lot__details__new">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/search_edittext"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/l1"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:hint="Search for an Existing UPC Code"
+                    android:textSize="15dp"
+                    android:textColor="#8A8B91"
+                    android:textColorHint="#7B7F82"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="10dp"
+                    android:ems="20"
+                    android:id="@+id/upc_search_edt"
+                    android:layout_weight="0.90" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@mipmap/ic_search"
+                    android:id="@+id/search"
+                    android:padding="10dp"
+                    android:layout_weight="0.1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/lot_border"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_bottom"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="If you don't have UPC Code fill the form below"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/title"
+                        android:gravity="center"
+                        android:textSize="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="#8A8B91" />
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/auctiontxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="8dp"
+                        android:text="Auction Number"
+                        android:textColor="#8A8B91"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/auction_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="13dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/desable_edit"
+                        android:ems="10"
+                        android:hint="EB4287560"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="7dp"
+                        android:textColor="#8A8B91"
+                        android:textColorHint="#7B7F82"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lottxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="8dp"
+                        android:text="Lot Number        "
+                        android:textColor="#8A8B91"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/lot_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="13dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/desable_edit"
+                        android:ems="10"
+                        android:hint="EB4287560"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="7dp"
+                        android:textColor="#8A8B91"
+                        android:textColorHint="#7B7F82"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_top"
+                    android:paddingTop="20dp"
+                    android:layout_margin="1dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:text="UPC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/upctxt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:hint="Enter the UPC Number"
+                            android:paddingLeft="5dp"
+                            android:textColorHint="#7B7F82"
+                            android:paddingBottom="7dp"
+                            android:paddingTop="7dp"
+                            android:textSize="14dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:maxLength="20"
+                            android:id="@+id/upc" />
+
+                        <TextView
+                            android:text="ITEM TITLE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/titletxt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:hint="Enter the Item Title"
+                            android:paddingLeft="5dp"
+                            android:lines="2"
+                            android:textColorHint="#7B7F82"
+                            android:textSize="14dp"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="2"
+                            android:minLines="1"
+                            android:id="@+id/item_title" />
+
+                        <TextView
+                            android:text="SELLER ID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/slrtxt"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#C8C9CC"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:hint="Enter the Seller ID"
+                            android:paddingLeft="5dp"
+                            android:textSize="14dp"
+                            android:textColorHint="#7B7F82"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:maxLength="60"
+                            android:id="@+id/seller_id" />
+
+                        <TextView
+                            android:text="DESCRIPTION"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/des"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="7"
+                            android:hint="Enter the Description"
+                            android:textColorHint="#7B7F82"
+                            android:paddingLeft="7dp"
+                            android:paddingRight="7dp"
+                            android:paddingTop="4dp"
+                            android:lineSpacingExtra="1dp"
+                            android:lineSpacingMultiplier="1"
+                            android:textSize="14dp"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/lot_border"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:minLines="3"
+                            android:maxLines="7"
+                            android:id="@+id/descr" />
+
+                        <TextView
+                            android:text="ITEM CLASS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/item_classtxt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Enter the Item Class"
+                            android:textColorHint="#7B7F82"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:maxLength="50"
+                            android:textSize="14dp"
+                            android:id="@+id/item_class" />
+
+                        <TextView
+                            android:text="BRAND"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brand_txt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Enter the Brand Name"
+                            android:textColorHint="#7B7F82"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:textSize="14dp"
+                            android:maxLength="50"
+                            android:id="@+id/brand" />
+
+                        <TextView
+                            android:text="MODEL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/model_txt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Enter the Model"
+                            android:textColorHint="#7B7F82"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:textSize="14dp"
+                            android:maxLength="50"
+                            android:id="@+id/model" />
+
+                        <TextView
+                            android:text="ITEM COLOR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/color_txt"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#C8C9CC"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Enter the Color"
+                            android:textColorHint="#7B7F82"
+                            android:paddingLeft="5dp"
+                            android:textSize="14dp"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:maxLength="50"
+                            android:id="@+id/color" />
+
+                        <TextView
+                            android:text="ITEM DIMENSION"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dimension_txt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Enter the Dimension"
+                            android:textColorHint="#7B7F82"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="14dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:maxLength="50"
+                            android:id="@+id/dimension" />
+
+                        <TextView
+                            android:text="CONDITION"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/contxt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Enter the Condition"
+                            android:paddingLeft="5dp"
+                            android:textColorHint="#7B7F82"
+                            android:paddingBottom="10dp"
+                            android:textSize="14dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:maxLength="60"
+                            android:id="@+id/condition" />
+
+                        <TextView
+                            android:text="LOCATION"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/loctxt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Enter the Location"
+                            android:ems="10"
+                            android:textColorHint="#7B7F82"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="14dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:maxLines="1"
+                            android:maxLength="60"
+                            android:id="@+id/location" />
+
+                        <TextView
+                            android:text="ADDITIONAL DETAILS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/additional_detail_check"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <equipbid.armentum.com.equip_bid.ExpandableHeightListView
+                            android:id="@+id/list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginRight="-10dp"
+                            android:horizontalSpacing="-15dp"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            android:padding="0dp"
+                            android:scrollHorizontally="true"
+                            android:verticalScrollbarPosition="defaultPosition"
+                            android:verticalSpacing="-10dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:inputType="textMultiLine"
+                            android:lines="5"
+                            android:textSize="14dp"
+                            android:hint="Enter Other Details"
+                            android:ems="10"
+                            android:textColorHint="#7B7F82"
+                            android:paddingBottom="10dp"
+                            android:background="@drawable/edittext"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#8A8B91"
+                            android:minLines="1"
+                            android:maxLines="5"
+                            android:id="@+id/add_detalils"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:text="CATEGORY"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cattxt"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/edittext"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/cat"
+                                android:layout_below="@+id/txt"
+                                android:textColorHint="#7B7F82"
+                                android:paddingBottom="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginRight="4dp"
+                                android:textColor="#8A8B91"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                        </LinearLayout>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:text="START PRICE"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/starttxt"
+                                android:textColor="#C8C9CC"
+                                android:textSize="13dp"
+                                android:paddingRight="5dp"
+                                android:layout_marginBottom="12dp"/>
+
+                            <EditText
+                                android:id="@+id/start_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/edittext_createnew"
+                                android:ems="5"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:paddingBottom="7dp"
+                                android:paddingLeft="7dp"
+                                android:paddingTop="7dp"
+                                android:textColor="#8A8B91"
+                                android:textColorHint="#7B7F82"
+                                android:textSize="13dp"
+                                android:text="$10.00" />
+
+                            <TextView
+                                android:text="RESERVE PRICE"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/endtxt"
+                                android:textColor="#C8C9CC"
+                                android:textSize="13dp"
+                                android:layout_marginBottom="12dp"/>
+
+                            <EditText
+                                android:id="@+id/end_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/edittext_createnew"
+                                android:ems="5"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:layout_marginLeft="5dp"
+                                android:maxLines="1"
+                                android:paddingBottom="7dp"
+                                android:paddingLeft="7dp"
+                                android:paddingTop="7dp"
+                                android:textColor="#8A8B91"
+                                android:textColorHint="#7B7F82"
+                                android:textSize="13dp"
+                                android:text="$0.00"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:text="MSRP     "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/msrptxt"
+                                android:textColor="#C8C9CC"
+                                android:textSize="13dp"
+                                android:paddingRight="30dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="12dp"/>
+
+                            <EditText
+                                android:id="@+id/msrp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/edittext_createnew"
+                                android:ems="5"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:paddingBottom="7dp"
+                                android:paddingLeft="7dp"
+                                android:paddingTop="7dp"
+                                android:textColor="#8A8B91"
+                                android:textColorHint="#7B7F82"
+                                android:textSize="13dp"
+                                android:text="$" />
+
+                            <TextView
+                                android:text="QUANTITY        "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/qtytxt"
+                                android:textColor="#C8C9CC"
+                                android:textSize="12dp"
+                                android:layout_marginRight="11dp"
+                                android:layout_marginBottom="12dp"/>
+
+                            <EditText
+                                android:id="@+id/quantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/edittext_createnew"
+                                android:ems="5"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:paddingBottom="7dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="7dp"
+                                android:textColor="#8A8B91"
+                                android:textColorHint="#7B7F82"
+                                android:textSize="13dp"
+                                android:text="1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:text="TAXABLE"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/taxtxt"
+                                android:textColor="#C8C9CC"
+                                android:textSize="14dp"
+                                android:layout_marginTop="6dp"
+                                android:paddingRight="31dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="12dp"/>
+
+                            <RadioGroup
+                                android:id="@+id/radioTax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rdYes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="yes"
+                                    android:textSize="14dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:checked="true"
+                                    android:textColor="#8A8B91" />
+
+                                <RadioButton
+                                    android:id="@+id/rdNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:textColor="#8A8B91"
+                                    android:text="no" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:text="EXTERNAL IMAGES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/extImg"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="7dp"
+                            android:paddingRight="31dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <equipbid.armentum.com.equip_bid.ExpandableHeightGridView
+                            android:id="@+id/gridGallery1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginRight="-10dp"
+                            android:horizontalSpacing="-15dp"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            android:paddingBottom="0dp"
+                            android:scrollHorizontally="true"
+                            android:verticalScrollbarPosition="defaultPosition"
+                            tools:ignore="NestedScrolling"
+                            android:verticalSpacing="-10dp" />
+
+                        <TextView
+                            android:text="CAMERA / GALLERY IMAGES"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/glryImg"
+                            android:textColor="#C8C9CC"
+                            android:textSize="14dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="7dp"
+                            android:paddingRight="31dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="12dp"/>
+
+                        <equipbid.armentum.com.equip_bid.ExpandableHeightGridView
+                            android:id="@+id/gridGalleryCamera"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="-10dp"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginRight="-10dp"
+                            android:horizontalSpacing="-15dp"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            android:padding="0dp"
+                            android:scrollHorizontally="true"
+                            android:verticalScrollbarPosition="defaultPosition"
+                            android:verticalSpacing="-10dp"
+                            tools:listitem="@layout/gallery_item" />
+
+                        <equipbid.armentum.com.equip_bid.ExpandableHeightGridView
+                            android:id="@+id/gridGallery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="-10dp"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginRight="-10dp"
+                            android:horizontalSpacing="-15dp"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            android:padding="0dp"
+                            android:scrollHorizontally="true"
+                            android:verticalScrollbarPosition="defaultPosition"
+                            android:verticalSpacing="-10dp"
+                            tools:listitem="@layout/gallery_item" />
+
+                        <Button
+                            android:id="@+id/submit"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#fff"
+                            android:textAllCaps="false"
+                            android:background="@drawable/btn_green"
+                            android:textSize="19dp"
+                            android:text="Submit"
+                            android:layout_weight="0.20" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/actionbarcolor"
+    tools:context=".Login_Activity">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/main_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/actionbarcolor"
+                android:id="@+id/li">
+                <ImageView
+                    android:layout_width="220dp"
+                    android:layout_height="90dp"
+                    app:srcCompat="@mipmap/main_n"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/main" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:id="@+id/login_title"
+                    android:textSize="13dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="Enter your registered Username / e-mail Id and password to login to your Equip-bid account"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_below="@+id/main_l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/green_arrow"
+                android:background="#fff"
+                android:layout_gravity="center"
+                android:id="@+id/image6" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username or Email Id"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:textColor="#7B7F82"
+                android:textSize="17dp"
+                android:ems="10"
+                android:background="@drawable/edittext"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColorHint="#7B7F82"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textColor="#7B7F82"
+                android:textSize="17dp"
+                android:ems="10"
+                android:background="@drawable/edittext"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:maxLength="30"/>
+
+            <TextView
+                android:text="@string/forgot"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#7B7F82"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/forgotpass" />
+
+            <Button
+                android:id="@+id/login"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/black_btn"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="19dp"
+                android:layout_weight="0.20" />
+
+            <Button
+                android:id="@+id/sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/black_btn"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textSize="19dp"
+                android:layout_weight="0.20" />
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                tools:ignore="ObsoleteLayoutParam">
+
+            </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

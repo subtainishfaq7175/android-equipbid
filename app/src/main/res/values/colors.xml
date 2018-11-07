@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#52D97B</color>
+    <color name="colorPrimaryDark">#52D97B</color>
+    <color name="colorAccent">#52D97B</color>
+
+    <color name="disable_forground_grey">#52D97B</color>
+    <color name="disable_thumb_grey">#52D97B</color>
+    <color name="enable_thumb_green">#52D97B</color>
+
+    <color name="colorTransBg">#BAFFFFFF</color>
+
+</resources>
