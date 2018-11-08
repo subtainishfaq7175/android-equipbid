@@ -4211,7 +4211,14 @@ public class Lot_Details_New extends AppCompatActivity
                                     l.setThumbnail("");
                                 }
 
-                               if(isNetworkAvailable()) uploadMultipartBoth(imagePaths_camera);
+                               if(isNetworkAvailable()) {
+                                   if(imagePaths_camera.size()!=0)
+                                       uploadMultipartBoth(imagePaths_camera);
+                                   else
+                                       setLotDetails(p_token, Auction_name, lot_no, item_title, seller_id, description, item_class, model, color,
+                                               brand, dimension, category, condition, add_detalils, location, start_price, msrp, end_price,
+                                               quantity, textable, upc, remote_images, additional_details_checklist);
+                               }
                                 MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
                                 helper.setIsNetworkState(isNetworkAvailable());
                                 int count_AL = helper.CheckExistAL(Auction_name, lot_no, Lot_S);
