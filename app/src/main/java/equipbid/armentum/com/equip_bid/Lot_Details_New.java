@@ -5015,7 +5015,7 @@ public class Lot_Details_New extends AppCompatActivity
                     if(mWakeLock.isHeld())
                         mWakeLock.release();
                     hideDialog();
-                    Toast.makeText(getApplicationContext(), "Lot Details Updated Successfully By new code", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Lot Details Updated Successfully", Toast.LENGTH_SHORT).show();
                     Intent inext = new Intent(Lot_Details_New.this, Success_page.class);
                     inext.putExtra("name",Auction_name);
                     inext.putExtra("lotname",lot_no);
