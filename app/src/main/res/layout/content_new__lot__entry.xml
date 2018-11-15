@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:scrollbars="none">
 
-    </ScrollView>
+
 
     <LinearLayout
         android:id="@+id/main_l"
@@ -111,6 +111,7 @@
         android:orientation="horizontal"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
         android:id="@+id/scanview"
         android:visibility="visible">
 
@@ -265,5 +266,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
