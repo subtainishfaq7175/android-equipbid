@@ -1748,6 +1748,10 @@ public class Lot_Details_New extends AppCompatActivity
                         Log.e("modified_array", modified_response_array.toString());
 
                         spinadapter.notifyDataSetChanged();
+
+                        MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
+                        helper.deleteTitleCat();
+
                     }
 
                 } catch (JSONException e) {
@@ -1824,6 +1828,9 @@ public class Lot_Details_New extends AppCompatActivity
                     lotDetailsdataL.setAddDetailList(AddDetailList);
                     detailadapter.notifyDataSetChanged();
 
+                    MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
+                    helper.deleteTitleAdd();
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.e(TAG, "catch : " + AppConfig.URL_Add_Details);
@@ -1887,6 +1894,12 @@ public class Lot_Details_New extends AppCompatActivity
                             Add_Detail_list.setName(name_j);
                             Add_Detail_list.setId(id);
                             AddDetailList.add(Add_Detail_list);
+
+
+                            for (int j = 0; j < AddDetail_List.size(); j++) {
+
+                                Log.d("sarrerah", "onResponse: "+AddDetail_List.get(i));
+                            }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -2071,7 +2084,8 @@ public class Lot_Details_New extends AppCompatActivity
                         Log.e(TAG, "additonl_array " + additonl_array);
                         for (int i = 0; i < additonl_array.length(); i++)
                         {
-                            additional_details_checklist = additonl_array.getString(i);
+                            Log.d("citytower3", "onResponse: "+additonl_array.getString(i));
+                            additional_details_checklist = additional_details_checklist + "," + additonl_array.getString(i);
                             lotDetailsdataL.setAdditional_details_checklist(additonl_array.getString(i));
                             AddDetail_List_get.add(additional_details_checklist);
                         }
@@ -2347,6 +2361,9 @@ public class Lot_Details_New extends AppCompatActivity
                         upcno.setText("");
                         _msrp.setText("");
                     }
+
+                    MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
+                    helper.deleteTitle(Auction_name);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -2798,6 +2815,9 @@ public class Lot_Details_New extends AppCompatActivity
                         _msrp.setText("");
                     }
 
+                    MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
+                    helper.deleteTitle(Auction_name);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.e(TAG, "catch : " + AppConfig.URL_lot_details + Auction_name + "&lot_no=" + lot_no);
@@ -3014,6 +3034,9 @@ public class Lot_Details_New extends AppCompatActivity
             //Log.e(TAG, "checked_value " + AddDetail_List_get.toString());
             if (AddDetail_List_get.size() > 0) {
                 for (int k = 0; k < AddDetail_List_get.size(); k++) {
+
+                    Log.d("citytower", "getView: "+AddDetail_List_get.get(k));
+
                     Log.e("detailsk.get(k)", AddDetail_List_get.get(k));
                     if (checkBox.getText().toString().equals(AddDetail_List_get.get(k))) {
                         ArrayList<Add_Detail> countryList = detailadapter.AddDetailList;
@@ -4181,6 +4204,9 @@ public class Lot_Details_New extends AppCompatActivity
                                 l.setRemote_images(remote_images);
                                 l.setImages(imagePaths_camera+"");
                                 l.setFlag(0);
+
+                                Log.d("citytower2", "onClick: "+additional_details_checklist);
+
                                 if(Mfile != null)
                                 {
                                    l.setmFile(Mfile+"");
@@ -4318,6 +4344,9 @@ public class Lot_Details_New extends AppCompatActivity
                         }
                     }
 
+                    MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
+                    helper.deleteTitle(Auction_name);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.e(TAG, "catch : " + AppConfig.URL_lot_details+Auction_name+"&lot_no="+lot_no);
@@ -4430,6 +4459,10 @@ public class Lot_Details_New extends AppCompatActivity
                     else if (code.equals("lot_not_used_yet"))
                     {
                     }
+
+                    MyDatabaseHelper helper = new MyDatabaseHelper(Lot_Details_New.this);
+                    helper.deleteTitle(Auction_name);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.e(TAG, "catch : " + AppConfig.URL_lot_details+Auction_name+"&lot_no="+lot_no);
